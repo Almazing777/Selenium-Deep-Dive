@@ -14,7 +14,7 @@ public class base {
         //expected array
         int j = 0;
 
-        String[] itemsNeeded = {"Cucumber", "Brocolli", "Beetroot"};
+        String[] itemsNeeded = {"Cucumber", "Brocolli", "Beetroot", "Carrot"};
 
         driver.get("https://rahulshettyacademy.com/seleniumPractise/");
         Thread.sleep(500);
@@ -32,7 +32,7 @@ public class base {
             if(itemsNeededList.contains(formattedName)){
                 j++;
                 driver.findElements(By.cssSelector("[class='product-action'] button")).get(i).click();
-                if(j == 3){ break;}
+                if(j == itemsNeeded.length){ break;}
             }
         }
     }
